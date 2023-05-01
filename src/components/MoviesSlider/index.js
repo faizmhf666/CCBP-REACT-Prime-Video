@@ -1,10 +1,13 @@
 // Write your code here
 import Slider from 'react-slick'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import MovieItem from '../MovieItem'
 
 const MoviesSlider = props => {
-  const {moviesListDetails} = props
+  const {moviesList} = props
 
   const settings = {
     dots: false,
@@ -17,8 +20,8 @@ const MoviesSlider = props => {
   return (
     <div data-testid="Movies">
       <Slider {...settings}>
-        {moviesListDetails.map(each => (
-          <MovieItem moviesListItems={each} key={each.id} />
+        {moviesList.map(each => (
+          <MovieItem movieDetailsList={each} key={each.id} />
         ))}
       </Slider>
     </div>
