@@ -17,9 +17,6 @@ const MovieItem = props => {
       >
         {close => (
           <>
-            <div>
-              <p>React is a popular and widely used programming language</p>
-            </div>
             <button
               type="button"
               data-testid="closeButton"
